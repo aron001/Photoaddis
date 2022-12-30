@@ -10,7 +10,8 @@ import { Stack } from '@mui/system'
 function Contacts() {
   return (
     <div id='contact'>
-      <Typography variant="h2" sx={{ color: "#545fc4", textAlign: "center" , fontFamily:'poppins'}}>Contact Us</Typography>
+      <Box sx={{marginTop:5}}>
+      <Typography variant="h2" sx={{ color: "#545fc4", textAlign: "center" , fontFamily:'poppins', marginTop:'5'}}>Contact Us</Typography>
         <Box display='flex'justifyContent='space-evenly' alignItems='center' gap={3}  sx={{ marginX:4,
                 }}>
             <Box sx={{
@@ -55,8 +56,8 @@ function Contacts() {
         </Button>
      
             </Box>
-            <Box sx={{width:500, }} >
-              <img src={contactus} alt="contact us "/>
+            <Box sx={{display:{xs:'none',md:'block'} }} >
+              <img src={contactus} width={400} alt="contact us "/>
               <Stack direction='row' spacing={6} alignItems='center' justifyContent='center' marginLeft={10}>
 <IconButton color='primary' back size='large'>
   
@@ -75,6 +76,7 @@ function Contacts() {
 </IconButton>
 </Stack>
             </Box>
+        </Box>
         </Box>
     </div>
   )
