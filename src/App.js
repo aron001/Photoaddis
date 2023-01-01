@@ -10,9 +10,14 @@ import './app.css'
 function App() {
   return (
     <div className="App">
-      <Header/>
+    <Header/>
       <Slider/>
       <Home/>
+      <Service/>
+      <Gallary/>
+      <Contacts/>
+      <Footer/>
+      
       {/*
       <Gallary/>
       <Service/>

@@ -1,4 +1,4 @@
-import { Paper, Button, Grid, Typography,  } from '@mui/material'
+import { Paper, Button, Grid, Typography, Box, Container,  } from '@mui/material'
 import React, { useState } from 'react'
 import Birthday from './../Asset/Birthday.jpg'
 import wedding from './../Asset/wedding.jpg'
@@ -15,26 +15,36 @@ function Gallary() {
   const [open , setOpen]=useState(false)
   return (
     <div id='gallary'>
+      
+      <Box width='93%'>
+
+      
       <Typography variant='h2' textAlign='center'color='#545fc4' fontFamily="poppins"> Gallery</Typography>
       <Grid
   container
-  direction="row"
+  direction="column"
   justifyContent="center"
   alignItems="center"
   margin={0}
   padding={0}
   spacing={1}
+  
+  sx={{display:{md:'flex'}}}
  
 >
+  
+
+  
   <Grid item xs={4}>
     <Paper elevation={16}  sx={{
-      width:400,
+      
       height:400,
       bgcolor:'#545fc4',
       padding:2,
       textAlign:'center',
-      borderRadius:3
-     
+      borderRadius:3,
+      marginBottom:3,
+     width:{md:880}
     
     }}>
       <Typography variant='h5' fontFamily='poppins' color='white'>Birthday Pictures</Typography>
@@ -46,16 +56,17 @@ function Gallary() {
 <Birth open={open} close={()=>setOpen(false)}/>
     </Paper>
   </Grid>
+  
   <Grid item xs={4}>
     <Paper elevation={16} sx={{
-   width:400,
+   
    height:400,
    bgcolor:'#545fc4',
    padding:2,
    textAlign:'center',
-   borderRadius:3
-  
-      
+   borderRadius:3,
+  marginBottom:3,
+  width:{md:880}
    
     }}> 
     <Typography variant='h5' fontFamily='poppins' color='white'>Wedding Pictures</Typography>
@@ -71,12 +82,13 @@ function Gallary() {
     <Paper elevation={16} sx={{
       bgcolor:'primary.main',
    
-      width:400,
+      
       height:400,
       bgcolor:'#545fc4',
       padding:2,
       textAlign:'center',
-      borderRadius:3
+      borderRadius:3,
+      width:{md:880}
     }}>
     <Typography variant='h5' fontFamily='poppins' color='white' >Graduation Pictures</Typography>
     <img src={grad} alt='birthday img' width='100%' height={300} style={{borderRadius:'10px'}}/>
@@ -89,6 +101,7 @@ function Gallary() {
   </Grid>
 
 </Grid>
+</Box>
 
     </div>
   )

@@ -25,7 +25,7 @@ function Home() {
   }))
   return (
     <div id='aboutus'>
-    <Box>
+    <Box sx={{overflowX:'hidden'}}>
       <Box sx={{ marginY: 10 }}>
         <Typography variant="h2" sx={{ color: "#545fc4", textAlign: "center" ,fontFamily:'poppins'}}>
           About Us
@@ -86,7 +86,7 @@ function Home() {
           
           }}
         >
-          <Box width='50%'>
+          <Box width='100%'>
             <Typography variant="h2" fontFamily="poppins">Photo Addis </Typography>
             <Typography variant="body1"  sx={{  color:'#0C1F09', fontFamily:'poppins' }}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
@@ -99,11 +99,11 @@ function Home() {
             </Typography>
             <Typography variant="body1" sx={{ marginY: 2.5 , color:'#0C1F09' ,fontFamily:'poppins'}}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. heh
-              hfhghrfv hcjhiurvitbjvjtyij ehjbfehbfrh
+              hfhghrfv hcjhiurvitbjvjtyij ehjbfehbfrh photo addis
             </Typography>
             <Box
               sx={{
-                display: "flex",
+                display: {xs:'block',md:'flex'},
                 rowGap: 10,
                 borderRadius: 2,
               }}
@@ -122,14 +122,15 @@ function Home() {
               />
             </Box>
           </Box>
-          <Box width='50%'>
+          <Box sx={{display:{xs:'none' ,md:'block'}}}width='60%'>
             <img
               src={service}
               alt="camera"
+           
               style={{
                 borderRadius: 10,
                 background: "linear-gradient(blue, pink)",
-                maxWidth:'100%'
+                maxWidth:'50%'
               }}
             />
           </Box>

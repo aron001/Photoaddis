@@ -11,6 +11,9 @@ import ModalBook from "../ModalBook";
 function Footer() {
   return (
     <Box sx={{background:"#545fc4", textAlign:'center', fontFamily:'poppins'}}>
+      <Box sx={{display:{xs:'none',sm:'block'}}}>
+
+      
 <Grid container spacing={2} sx={{textAlign:'center',padding:3,marginTop:30}} >
   <Grid item xs={4}>
     <Box>
@@ -32,12 +35,15 @@ function Footer() {
     </Box>
   </Grid>
 </Grid>
+</Box>
+<Box sx={{marginTop:5}}>
 <h3>Our socials</h3>
 <Box sx={{display:'flex', gap:5,justifyContent:'center',alignItems:'center',marginTop:3}}>
 <IoLogoYoutube size={40}  />
 <BsTelegram size={40}/>
 <FaInstagramSquare size={40}/>
 <BsFacebook size={40}/>
+</Box>
 </Box>
 </Box>
 
